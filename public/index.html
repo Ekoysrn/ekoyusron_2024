@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html data-theme="acid" lang="en" class="scroll-smooth" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Tailwindcss</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/src/images/AkademyCode.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="/public/css/output.css">
+</head>
+
+<body class="">
+
+  <!-- header start -->
+  <header id="home" class="bg-transparent fixed left-0 top-0 w-full flex items-center dark:text-white">
+    <div class="container">
+      <div class="flex justify-between items-center relative w-full">
+        <div class="p-4">
+          <a href="#home" class="text-gradient font-bold text-lg lg:text-2xl">Ekoyusron</a>
+        </div>
+
+        <div class="flex p-4 items-center">
+          <button type="button" id="btn" class="block absolute right-4 lg:hidden" onclick="hamburger(this)">
+            <span class="x-line gradient origin-top-left duration-300 ease-in-out"></span>
+            <span class="x-line gradient duration-300 ease-in-out"></span>
+            <span class="x-line gradient origin-bottom-left duration-300 ease-in-out"></span>
+          </button>
+        </div>
+
+        <nav id="menu" class="bg-white absolute top-full right-3 py-4 shadow-xl rounded-xl hidden max-w-[250px] w-full lg:block lg:static lg:justify-self-end lg:rounded-none lg:shadow-none lg:mx-96 lg:bg-transparent lg:w-full">
+          <ul class="block lg:flex ">
+            <li><a href="#home" class="hover:text-gradient text-base text-slate-800 font-bold py-2 mx-8">home</a></li>
+            <li><a href="#about" class="hover:text-gradient text-base text-slate-800 font-bold py-2 mx-8">about</a></li>
+            <li><a href="#contact" class="hover:text-gradient text-base text-slate-800 font-bold py-2 mx-8">project</a></li>
+            <li><a href="#contact" class="hover:text-gradient text-base text-slate-800 font-bold py-2 mx-8">carier</a></li>
+            <li><a href="#contact" class="hover:text-gradient text-base text-slate-800 font-bold py-2 mx-8">contact</a></li>
+          </ul>
+        </nav>
+
+      </div>
+  </div>
+  </header>
+  <!-- header end -->
+
+
+  <!-- hero section start -->
+  <section class="mt-32 overflow-hidden">
+    <div class="container " data-aos="fade-right" data-aos-duration="3000" data-aos-easing="ease-out-cubic">
+      <div class="flex flex-wrap">
+        <div class="w-full self-center px-4 lg:w-1/2">
+          <h1 class="text-xl text-gradient lg:text-2xl">Hello guys I am <span
+              class="block text-gradient my-1 text-2xl lg:text-4xl lg:mb-4 lg:py-1">Eko Yusron
+              Ardiyansyah</span></h1>
+          <h2 class="text-slate-500 font-medium lg:text-xl">web developer & programmer</h2>
+          <p class="text-slate-800 font-medium leading-relaxed mb-5 text-lg">Learning web programming is fun and easy
+            :), right? <span class="text-slate-950 font-bold">No!</span></p>
+
+          <button
+            class="block gradient rounded-full text-white font-bold py-3 px-8 hover:gradientotol duration-300 transition-all ease-in-out shadow-2xl">
+            <a href="#" class="items-center">contact me</a>
+          </button>
+        </div>
+
+        <div class="self-end w-full px-4 relative lg:w-1/2" data-aos="fade-right" data-aos-duration="3000" data-aos-easing="ease-out-cubic">
+          <div class="mt-4">
+            <img src="/src/images/x.png" alt="exo" width="261px" height="261px" class="mx-w-full mx-auto">
+            <span class="absolute -z-10 top-0 left-1/2 -translate-x-1/2">
+              <svg width="1000px" height="600px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#9EF0F0"
+                  d="M31.4,-40.4C38.8,-31.3,41.4,-19.5,44.8,-6.9C48.3,5.8,52.5,19.3,48.4,29.4C44.3,39.4,31.7,46.1,18.4,51.1C5.1,56.2,-8.9,59.7,-24.6,58.1C-40.3,56.5,-57.5,49.8,-66.3,37.1C-75,24.4,-75.1,5.6,-72.3,-13.2C-69.6,-31.9,-63.8,-50.6,-51.3,-58.7C-38.7,-66.8,-19.4,-64.4,-3.7,-60.1C12.1,-55.7,24.1,-49.4,31.4,-40.4Z"
+                  transform="translate(100 100) scale(1.3)" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- hero section end -->
+
+  <!-- about me section -->
+  <section class="container mt-8" data-aos="fade-up" data-aos-duration="3000" data-aos-easing="ease-out-cubic">
+    <div>
+      <div class="flex flex-wrap items-center">
+        <!-- about me -->
+        <div class="w-full lg:w-1/2 lg:p-4">
+          <h1 class="text-gradient text-xl lg:text-2xl">About me</h1>
+          <h2 class="font-medium text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            dignissimos repellat eum, magni porro doloribus itaque nemo illum qui doloremque molestiae unde eos,
+            deleniti id. Similique optio quo fugit nostrum.</h2>
+          <h1 class="text-gradient text-lg">tech stack</h1>
+
+          <!-- icon tech stack start -->
+          <div class="flex items-center gap-2 py-3">
+            <!-- html start-->
+            <div id="htmlicon" class="h-8 w-8 group tooltip" data-tip="html">
+              <a href="https://camo.githubusercontent.com/e251e8fab79eebd3a8d64b56a14b720cb190e56ed590f747042ec04d990a543b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d656b6f7973726e266c6f63616c653d656e266c61796f75743d636f6d70616374267468656d653d6461726b26686964655f626f726465723d747275652662675f636f6c6f723d31373137313726636172645f77696474683d383030"
+                target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520">
+                  <path fill="#e34f26" d="M41 460L0 0h451l-41 460-185 52" />
+                  <path fill="#ef652a" d="M226 472l149-41 35-394H226" />
+                  <path fill="#ecedee" d="M226 208h-75l-5-58h80V94H84l15 171h127zm0 147l-64-17-4-45h-56l7 89 117 32z" />
+                  <path fill="#fff" d="M226 265h69l-7 73-62 17v59l115-32 16-174H226zm0-171v56h136l5-56z" />
+                </svg>
+              </a>
+            </div>
+            <!-- html end -->
+
+            <!-- css start-->
+            <div class="h-8 w-8 tooltip" data-tip="css">
+              <a href="https://camo.githubusercontent.com/e251e8fab79eebd3a8d64b56a14b720cb190e56ed590f747042ec04d990a543b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d656b6f7973726e266c6f63616c653d656e266c61796f75743d636f6d70616374267468656d653d6461726b26686964655f626f726465723d747275652662675f636f6c6f723d31373137313726636172645f77696474683d383030"
+                target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520">
+                  <path fill="#0c73b8" d="M41 460L0 0h451l-41 460-185 52" />
+                  <path fill="#30a9dc" d="M226 472l149-41 35-394H226" />
+                  <path fill="#ecedee" d="M226 208H94l5 57h127zm0-114H84l5 56h137zm0 261l-124-33 7 60 117 32z" />
+                  <path fill="#fff" d="M226 265h69l-7 73-62 17v59l115-32 26-288H226v56h80l-6 58h-74z" />
+                </svg>
+              </a>
+            </div>
+            <!-- css end -->
+
+            <!-- javascript start-->
+            <div class="h-8 w-8 tooltip" data-tip="javascript">
+              <a href="https://camo.githubusercontent.com/e251e8fab79eebd3a8d64b56a14b720cb190e56ed590f747042ec04d990a543b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d656b6f7973726e266c6f63616c653d656e266c61796f75743d636f6d70616374267468656d653d6461726b26686964655f626f726465723d747275652662675f636f6c6f723d31373137313726636172645f77696474683d383030"
+                target="_blank">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1052 1052">
+                  <path fill="#f0db4f" d="M0 0h1052v1052H0z" />
+                  <path
+                    d="M965.9 801.1c-7.7-48-39-88.3-131.7-125.9-32.2-14.8-68.1-25.399-78.8-49.8-3.8-14.2-4.3-22.2-1.9-30.8 6.9-27.9 40.2-36.6 66.6-28.6 17 5.7 33.1 18.801 42.8 39.7 45.4-29.399 45.3-29.2 77-49.399-11.6-18-17.8-26.301-25.4-34-27.3-30.5-64.5-46.2-124-45-10.3 1.3-20.699 2.699-31 4-29.699 7.5-58 23.1-74.6 44-49.8 56.5-35.6 155.399 25 196.1 59.7 44.8 147.4 55 158.6 96.9 10.9 51.3-37.699 67.899-86 62-35.6-7.4-55.399-25.5-76.8-58.4-39.399 22.8-39.399 22.8-79.899 46.1 9.6 21 19.699 30.5 35.8 48.7 76.2 77.3 266.899 73.5 301.1-43.5 1.399-4.001 10.6-30.801 3.199-72.101zm-394-317.6h-98.4c0 85-.399 169.4-.399 254.4 0 54.1 2.8 103.7-6 118.9-14.4 29.899-51.7 26.2-68.7 20.399-17.3-8.5-26.1-20.6-36.3-37.699-2.8-4.9-4.9-8.7-5.601-9-26.699 16.3-53.3 32.699-80 49 13.301 27.3 32.9 51 58 66.399 37.5 22.5 87.9 29.4 140.601 17.3 34.3-10 63.899-30.699 79.399-62.199 22.4-41.3 17.6-91.3 17.4-146.6.5-90.2 0-180.4 0-270.9z"
+                    fill="#323330" />
+                </svg>
+              </a>
+            </div>
+            <!-- javascript end -->
+
+            <!-- boostrap start-->
+            <div class="h-14 w-10 flex justify-center items-center tooltip" data-tip="Boostrap">
+              <svg viewBox="0 0 256 204" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                <path fill="#7E13F8"
+                  d="M53.172 0C38.565 0 27.756 12.785 28.24 26.65c.465 13.32-.139 30.573-4.482 44.642C19.402 85.402 12.034 94.34 0 95.488v12.956c12.034 1.148 19.402 10.086 23.758 24.197 4.343 14.069 4.947 31.32 4.482 44.641-.484 13.863 10.325 26.65 24.934 26.65h149.673c14.608 0 25.414-12.785 24.93-26.65-.464-13.32.139-30.572 4.482-44.641 4.359-14.11 11.707-23.05 23.741-24.197V95.488c-12.034-1.148-19.382-10.086-23.74-24.196-4.344-14.067-4.947-31.321-4.483-44.642C228.261 12.787 217.455 0 202.847 0H53.17h.002ZM173.56 125.533c0 19.092-14.24 30.67-37.872 30.67h-40.23a4.339 4.339 0 0 1-4.338-4.339V52.068a4.339 4.339 0 0 1 4.339-4.34h39.999c19.705 0 32.637 10.675 32.637 27.063 0 11.503-8.7 21.801-19.783 23.604v.601c15.089 1.655 25.248 12.104 25.248 26.537Zm-42.26-64.05h-22.937v32.4h19.32c14.934 0 23.17-6.014 23.17-16.764 0-10.073-7.082-15.636-19.552-15.636Zm-22.937 45.256v35.705h23.782c15.548 0 23.786-6.239 23.786-17.965 0-11.728-8.467-17.742-24.786-17.742h-22.782v.002Z" />
+              </svg>
+            </div>
+            <!-- boostrap end -->
+
+            <!-- tailwind start -->
+            <a href="https://camo.githubusercontent.com/e251e8fab79eebd3a8d64b56a14b720cb190e56ed590f747042ec04d990a543b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d656b6f7973726e266c6f63616c653d656e266c61796f75743d636f6d70616374267468656d653d6461726b26686964655f626f726465723d747275652662675f636f6c6f723d31373137313726636172645f77696474683d383030"
+              target="_blank">
+
+              <div class="h-8 w-8 flex justify-center items-center tooltip" data-tip="tailwind">
+                <svg viewBox="0 0 256 154" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                  <defs>
+                    <linearGradient x1="-2.778%" y1="32%" x2="100%" y2="67.556%" id="gradient">
+                      <stop stop-color="#2298BD" offset="0%"></stop>
+                      <stop stop-color="#0ED7B5" offset="100%"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M128 0C93.867 0 72.533 17.067 64 51.2 76.8 34.133 91.733 27.733 108.8 32c9.737 2.434 16.697 9.499 24.401 17.318C145.751 62.057 160.275 76.8 192 76.8c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C174.249 14.743 159.725 0 128 0ZM64 76.8C29.867 76.8 8.533 93.867 0 128c12.8-17.067 27.733-23.467 44.8-19.2 9.737 2.434 16.697 9.499 24.401 17.318C81.751 138.857 96.275 153.6 128 153.6c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C110.249 91.543 95.725 76.8 64 76.8Z"
+                    fill="url(#gradient)"></path>
+                </svg>
+              </div>
+              <!-- tailwind end -->
+
+              <!-- git start -->
+              <div class="h8 w-8 tooltip" data-tip="git">
+                <a href="https://camo.githubusercontent.com/e251e8fab79eebd3a8d64b56a14b720cb190e56ed590f747042ec04d990a543b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d656b6f7973726e266c6f63616c653d656e266c61796f75743d636f6d70616374267468656d653d6461726b26686964655f626f726465723d747275652662675f636f6c6f723d31373137313726636172645f77696474683d383030"
+                  target="_blank">
+
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256">
+                    <path
+                      d="M251.17 116.6 139.4 4.82a16.49 16.49 0 0 0-23.31 0l-23.21 23.2 29.44 29.45a19.57 19.57 0 0 1 24.8 24.96l28.37 28.38a19.61 19.61 0 1 1-11.75 11.06L137.28 95.4v69.64a19.62 19.62 0 1 1-16.13-.57V94.2a19.61 19.61 0 0 1-10.65-25.73L81.46 39.44 4.83 116.08a16.49 16.49 0 0 0 0 23.32L116.6 251.17a16.49 16.49 0 0 0 23.32 0l111.25-111.25a16.5 16.5 0 0 0 0-23.33"
+                      fill="#DE4C36" />
+                  </svg>
+              </div>
+              <!-- git end -->
+
+              <!-- vscode start -->
+              <div class="h8 w-8 tooltip" data-tip="Visual Studio Code">
+                <a href="https://camo.githubusercontent.com/e251e8fab79eebd3a8d64b56a14b720cb190e56ed590f747042ec04d990a543b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d656b6f7973726e266c6f63616c653d656e266c61796f75743d636f6d70616374267468656d653d6461726b26686964655f626f726465723d747275652662675f636f6c6f723d31373137313726636172645f77696474683d383030"
+                  target="_blank">
+
+                  <svg viewBox="0 0 256 254" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                    <defs>
+                      <linearGradient id="c" x1="50%" x2="50%" y1="0%" y2="100%">
+                        <stop offset="0%" stop-color="#FFF" />
+                        <stop offset="100%" stop-color="#FFF" stop-opacity="0" />
+                      </linearGradient>
+                      <path id="a"
+                        d="M180.828 252.605a15.872 15.872 0 0 0 12.65-.486l52.501-25.262a15.94 15.94 0 0 0 9.025-14.364V41.197a15.939 15.939 0 0 0-9.025-14.363l-52.5-25.263a15.877 15.877 0 0 0-18.115 3.084L74.857 96.35l-43.78-33.232a10.614 10.614 0 0 0-13.56.603L3.476 76.494c-4.63 4.211-4.635 11.495-.012 15.713l37.967 34.638-37.967 34.637c-4.623 4.219-4.618 11.502.012 15.714l14.041 12.772a10.614 10.614 0 0 0 13.56.604l43.78-33.233 100.507 91.695a15.853 15.853 0 0 0 5.464 3.571Zm10.464-183.649-76.262 57.889 76.262 57.888V68.956Z" />
+                    </defs>
+                    <mask id="b" fill="#fff">
+                      <use xlink:href="#a" />
+                    </mask>
+                    <path fill="#0065A9"
+                      d="M246.135 26.873 193.593 1.575a15.885 15.885 0 0 0-18.123 3.08L3.466 161.482c-4.626 4.219-4.62 11.502.012 15.714l14.05 12.772a10.625 10.625 0 0 0 13.569.604L238.229 33.436c6.949-5.271 16.93-.315 16.93 8.407v-.61a15.938 15.938 0 0 0-9.024-14.36Z" />
+                    <path fill="#007ACC"
+                      d="m246.135 226.816-52.542 25.298a15.887 15.887 0 0 1-18.123-3.08L3.466 92.207c-4.626-4.218-4.62-11.502.012-15.713l14.05-12.773a10.625 10.625 0 0 1 13.569-.603l207.132 157.135c6.949 5.271 16.93.315 16.93-8.408v.611a15.939 15.939 0 0 1-9.024 14.36Z" />
+                    <path fill="#1F9CF0"
+                      d="M193.428 252.134a15.892 15.892 0 0 1-18.125-3.083c5.881 5.88 15.938 1.715 15.938-6.603V11.273c0-8.318-10.057-12.483-15.938-6.602a15.892 15.892 0 0 1 18.125-3.084l52.533 25.263a15.937 15.937 0 0 1 9.03 14.363V212.51c0 6.125-3.51 11.709-9.03 14.363l-52.533 25.262Z" />
+                    <path fill="url(#c)" fill-opacity=".25"
+                      d="M180.828 252.605a15.874 15.874 0 0 0 12.65-.486l52.5-25.263a15.938 15.938 0 0 0 9.026-14.363V41.197a15.939 15.939 0 0 0-9.025-14.363L193.477 1.57a15.877 15.877 0 0 0-18.114 3.084L74.857 96.35l-43.78-33.232a10.614 10.614 0 0 0-13.56.603L3.476 76.494c-4.63 4.211-4.635 11.495-.012 15.713l37.967 34.638-37.967 34.637c-4.623 4.219-4.618 11.502.012 15.714l14.041 12.772a10.614 10.614 0 0 0 13.56.604l43.78-33.233 100.506 91.695a15.857 15.857 0 0 0 5.465 3.571Zm10.464-183.65-76.262 57.89 76.262 57.888V68.956Z" />
+                  </svg>
+                </a>
+              </div>
+              <!-- vscode end -->
+          </div>
+          <!-- icon tech stack end -->
+        </div>
+        <!-- about me end -->
+
+        <!-- lets be friends -->
+        <div class="w-full lg:w-1/2 lg:p-4">
+          <h1 class="text-gradient text-xl lg:text-2xl">Let's be friends and colaboration</h1>
+          <h2 class="font-medium text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            dignissimos repellat eum, magni porro doloribus itaque nemo illum qui doloremque molestiae unde eos,
+            deleniti id. Similique optio quo fugit nostrum.</h2>
+          <h1 class="text-gradient text-lg">contact</h1>
+
+          <!-- icon contact start -->
+          <div class="flex items-center gap-2 py-[20px]">
+
+            <!-- github start -->
+            <div class="w-8 h-8 tooltip" data-tip="github">
+              <a href="https://github.com/Ekoysrn" target="_blank">
+                <svg viewBox="0 0 256 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                  <path
+                    d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z" />
+                </svg>
+              </a>
+            </div>
+            <!-- github end -->
+
+            <!-- whatsapp icon svg start-->
+            <div class="h-8 w-8 tooltip" data-tip="whatsapp">
+              <a href="https://wa.me/87762399040" target="_blank">
+                <svg viewBox="0 0 256 259" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                  <path
+                    d="m67.663 221.823 4.185 2.093c17.44 10.463 36.971 15.346 56.503 15.346 61.385 0 111.609-50.224 111.609-111.609 0-29.297-11.859-57.897-32.785-78.824-20.927-20.927-48.83-32.785-78.824-32.785-61.385 0-111.61 50.224-110.912 112.307 0 20.926 6.278 41.156 16.741 58.594l2.79 4.186-11.16 41.156 41.853-10.464Z"
+                    fill="#00E676" />
+                  <path
+                    d="M219.033 37.668C195.316 13.254 162.531 0 129.048 0 57.898 0 .698 57.897 1.395 128.35c0 22.322 6.278 43.947 16.742 63.478L0 258.096l67.663-17.439c18.834 10.464 39.76 15.347 60.688 15.347 70.453 0 127.653-57.898 127.653-128.35 0-34.181-13.254-66.269-36.97-89.986ZM129.048 234.38c-18.834 0-37.668-4.882-53.712-14.648l-4.185-2.093-40.458 10.463 10.463-39.76-2.79-4.186C7.673 134.63 22.322 69.058 72.546 38.365c50.224-30.692 115.097-16.043 145.79 34.181 30.692 50.224 16.043 115.097-34.18 145.79-16.045 10.463-35.576 16.043-55.108 16.043Zm61.385-77.428-7.673-3.488s-11.16-4.883-18.136-8.371c-.698 0-1.395-.698-2.093-.698-2.093 0-3.488.698-4.883 1.396 0 0-.697.697-10.463 11.858-.698 1.395-2.093 2.093-3.488 2.093h-.698c-.697 0-2.092-.698-2.79-1.395l-3.488-1.395c-7.673-3.488-14.648-7.674-20.229-13.254-1.395-1.395-3.488-2.79-4.883-4.185-4.883-4.883-9.766-10.464-13.253-16.742l-.698-1.395c-.697-.698-.697-1.395-1.395-2.79 0-1.395 0-2.79.698-3.488 0 0 2.79-3.488 4.882-5.58 1.396-1.396 2.093-3.488 3.488-4.883 1.395-2.093 2.093-4.883 1.395-6.976-.697-3.488-9.068-22.322-11.16-26.507-1.396-2.093-2.79-2.79-4.883-3.488H83.01c-1.396 0-2.79.698-4.186.698l-.698.697c-1.395.698-2.79 2.093-4.185 2.79-1.395 1.396-2.093 2.79-3.488 4.186-4.883 6.278-7.673 13.951-7.673 21.624 0 5.58 1.395 11.161 3.488 16.044l.698 2.093c6.278 13.253 14.648 25.112 25.81 35.575l2.79 2.79c2.092 2.093 4.185 3.488 5.58 5.58 14.649 12.557 31.39 21.625 50.224 26.508 2.093.697 4.883.697 6.976 1.395h6.975c3.488 0 7.673-1.395 10.464-2.79 2.092-1.395 3.487-1.395 4.882-2.79l1.396-1.396c1.395-1.395 2.79-2.092 4.185-3.487 1.395-1.395 2.79-2.79 3.488-4.186 1.395-2.79 2.092-6.278 2.79-9.765v-4.883s-.698-.698-2.093-1.395Z"
+                    fill="#FFF" />
+                </svg>
+              </a>
+            </div>
+            <!-- whatsapp icon svg end -->
+
+            <!-- instagram svg start  -->
+            <a href="https://www.instagram.com/ysrnar_/" target="_blank">
+              <div class="h-10 w-10 flex items-center justify-center tooltip" data-tip="instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                  <radialGradient id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1" cx="19.38" cy="42.035" r="44.899"
+                    gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#fd5"></stop>
+                    <stop offset=".328" stop-color="#ff543f"></stop>
+                    <stop offset=".348" stop-color="#fc5245"></stop>
+                    <stop offset=".504" stop-color="#e64771"></stop>
+                    <stop offset=".643" stop-color="#d53e91"></stop>
+                    <stop offset=".761" stop-color="#cc39a4"></stop>
+                    <stop offset=".841" stop-color="#c837ab"></stop>
+                  </radialGradient>
+                  <path fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)"
+                    d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z">
+                  </path>
+                  <radialGradient id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2" cx="11.786" cy="5.54" r="29.813"
+                    gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#4168c9"></stop>
+                    <stop offset=".999" stop-color="#4168c9" stop-opacity="0"></stop>
+                  </radialGradient>
+                  <path fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)"
+                    d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z">
+                  </path>
+                  <path fill="#fff"
+                    d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z">
+                  </path>
+                  <circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle>
+                  <path fill="#fff"
+                    d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z">
+                  </path>
+                </svg>
+              </div>
+            </a>
+            <!-- instagram svg icon end -->
+
+            <!-- twitter icon svg start-->
+            <a href="https://x.com/ekoyusron_" target="_blank">
+              <div class="w-8 h-8 flex justify-center items-center tooltip" data-tip="twitter">
+                <svg viewBox="0 0 256 209" width="256" height="209" xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid">
+                  <path
+                    d="M256 25.45c-9.42 4.177-19.542 7-30.166 8.27 10.845-6.5 19.172-16.793 23.093-29.057a105.183 105.183 0 0 1-33.351 12.745C205.995 7.201 192.346.822 177.239.822c-29.006 0-52.523 23.516-52.523 52.52 0 4.117.465 8.125 1.36 11.97-43.65-2.191-82.35-23.1-108.255-54.876-4.52 7.757-7.11 16.78-7.11 26.404 0 18.222 9.273 34.297 23.365 43.716a52.312 52.312 0 0 1-23.79-6.57c-.003.22-.003.44-.003.661 0 25.447 18.104 46.675 42.13 51.5a52.592 52.592 0 0 1-23.718.9c6.683 20.866 26.08 36.05 49.062 36.475-17.975 14.086-40.622 22.483-65.228 22.483-4.24 0-8.42-.249-12.529-.734 23.243 14.902 50.85 23.597 80.51 23.597 96.607 0 149.434-80.031 149.434-149.435 0-2.278-.05-4.543-.152-6.795A106.748 106.748 0 0 0 256 25.45"
+                    fill="#55acee" />
+                </svg>
+              </div>
+            </a>
+            <!-- telegram icon svg end -->
+
+            <!-- linkedln start -->
+            <div class="h-7 w-7 tooltip" data-tip="linkedln">
+              <a href="https://www.linkedin.com/in/eko-yusron-b8b65328b/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256">
+                  <path
+                    d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453"
+                    fill="#0A66C2" />
+                </svg>
+              </a>
+            </div>
+            <!-- linkedln end -->
+
+            <!-- tiktok icon start-->
+            <a href="https://www.tiktok.com/@ez.blass_" target="_blank">
+              <div class="h-7 w-7 flex items-center justify-center tooltip" data-tip="TikTok">
+                <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 290">
+                  <path fill="#FF004F"
+                    d="M189.72022 104.42148c18.67797 13.3448 41.55932 21.19661 66.27233 21.19661V78.08728c-4.67694.001-9.34196-.48645-13.91764-1.4554v37.41351c-24.71102 0-47.5894-7.85181-66.27232-21.19563v96.99656c0 48.5226-39.35537 87.85513-87.8998 87.85513-18.11308 0-34.94847-5.47314-48.93361-14.85978 15.96175 16.3122 38.22162 26.4315 62.84826 26.4315 48.54742 0 87.90477-39.33253 87.90477-87.85712v-96.99457h-.00199Zm17.16896-47.95275c-9.54548-10.4231-15.81283-23.89299-17.16896-38.78453v-6.11347h-13.18894c3.31982 18.92715 14.64335 35.09738 30.3579 44.898ZM69.67355 225.60685c-5.33316-6.9891-8.21517-15.53882-8.20226-24.3298 0-22.19236 18.0009-40.18631 40.20915-40.18631 4.13885-.001 8.2529.6324 12.19716 1.88328v-48.59308c-4.60943-.6314-9.26154-.89945-13.91167-.80117v37.82253c-3.94726-1.25089-8.06328-1.88626-12.20313-1.88229-22.20825 0-40.20815 17.99196-40.20815 40.1873 0 15.6937 8.99747 29.28075 22.1189 35.89954Z" />
+                  <path
+                    d="M175.80259 92.84876c18.68293 13.34382 41.5613 21.19563 66.27232 21.19563V76.63088c-13.79353-2.93661-26.0046-10.14114-35.18573-20.16215-15.71554-9.80162-27.03808-25.97185-30.3579-44.898H141.8876v189.84333c-.07843 22.1318-18.04855 40.05229-40.20915 40.05229-13.05889 0-24.66039-6.22169-32.00788-15.8595-13.12044-6.61879-22.1179-20.20683-22.1179-35.89854 0-22.19336 17.9999-40.1873 40.20815-40.1873 4.255 0 8.35614.66217 12.20312 1.88229v-37.82254c-47.69165.98483-86.0473 39.93316-86.0473 87.83429 0 23.91184 9.55144 45.58896 25.05353 61.4276 13.98514 9.38565 30.82053 14.85978 48.9336 14.85978 48.54544 0 87.89981-39.33452 87.89981-87.85612V92.84876h-.00099Z" />
+                  <path fill="#00F2EA"
+                    d="M242.07491 76.63088V66.51456c-12.4384.01886-24.6326-3.46278-35.18573-10.04683 9.34196 10.22255 21.64336 17.27121 35.18573 20.16315Zm-65.54363-65.06015a67.7881 67.7881 0 0 1-.72869-5.45726V0h-47.83362v189.84531c-.07644 22.12883-18.04557 40.04931-40.20815 40.04931-6.50661 0-12.64987-1.54375-18.09025-4.28677 7.34749 9.63681 18.949 15.8575 32.00788 15.8575 22.15862 0 40.13171-17.9185 40.20915-40.0503V11.57073h34.64368ZM99.96593 113.58077V102.8112c-3.9969-.54602-8.02655-.82003-12.06116-.81805C39.35537 101.99315 0 141.32669 0 189.84531c0 30.41846 15.46735 57.22621 38.97116 72.99536-15.5021-15.83765-25.05353-37.51576-25.05353-61.42661 0-47.90014 38.35466-86.84847 86.0483-87.8333Z" />
+                </svg>
+              </div>
+            </a>
+            <!-- tiktok icon end-->
+
+          </div>
+          <!-- icon contact end -->
+        </div>
+        <!-- end -->
+      </div>
+    </div>
+  </section>
+  <!-- about me section -->
+
+  <!-- project section -->
+
+  <script src="/public/main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

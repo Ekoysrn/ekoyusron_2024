@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .gradient {
+    @apply bg-gradient-to-r from-cyan-500 to-blue-500 font-bold
+  }
+  
+  .text-gradient{
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 font-bold
+  }
+  .gradientotol {
+    @apply bg-gradient-to-l from-cyan-500 to-blue-500 font-bold
+  }
+
+  .nav-fixed{
+    @apply bg-white z-50;
+    backdrop-filter: blur(20px);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.0);  
+  }
+
+  .nav{
+    @apply bg-white z-50;
+    backdrop-filter: blur(20px);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.0);  
+  }
+
+  
+
+  .x-line{
+    @apply w-[30px] h-[4px] block my-1;
+  }
+}
+
+.hamburger-active > :nth-child(1){
+  @apply rotate-[34deg]
+}
+
+.hamburger-active > :nth-child(2){
+  @apply scale-0
+}
+
+.hamburger-active > :nth-child(3){
+  @apply -rotate-[34deg]
+}
+
+body{
+  height: 2000px;
+}

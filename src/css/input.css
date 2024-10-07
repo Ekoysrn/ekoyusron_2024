@@ -49,9 +49,6 @@
   @apply -rotate-[34deg]
 }
 
-body{
-  height: 2000px;
-}
 
 /* card */
 .card {

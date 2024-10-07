@@ -6,6 +6,10 @@
   .gradient {
     @apply bg-gradient-to-r from-cyan-500 to-blue-500 font-bold
   }
+
+  .tgradient {
+    @apply bg-gradient-to-r from-cyan-500 to-blue-500 font-bold bg-opacity-10
+  }
   
   .text-gradient{
     @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 font-bold
@@ -47,4 +51,17 @@
 
 body{
   height: 2000px;
+}
+
+/* card */
+.card {
+  @apply bg-white text-justify hover:bg-cyan-500 bg-opacity-10 hover:bg-opacity-10 backdrop-blur-sm hover:backdrop-blur-md rounded-3xl border transition-all duration-500 shadow-xl hover:bg-gradient-to-r from-cyan-100 to-blue-100  text-white overflow-clip;
+}
+
+.card-img {
+  @apply rounded-xl h-52 duration-500 group-hover:border-cyan-500 brightness-75 group-hover:brightness-100 border-cyan-500 group-hover:transition-all group-hover:duration-500 overflow-clip;
+}
+
+.card-link {
+  @apply flex justify-between border group-hover:border-cyan-500 flex-wrap px-4 py-3 overflow-clip bg-cyan-200 bg-opacity-10 hover:bg-opacity-25 transition-all duration-500 rounded-xl mx-4 cursor-pointer shadow-md;
 }

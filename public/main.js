@@ -12,8 +12,13 @@ window.onscroll = function(){
   }
 }
 
+let func = "function";
 
 function hamburger(e){
   e.classList.toggle("hamburger-active");
   menu.classList.toggle("hidden")
+}
+
+let funct = () => {
+  console.log("heder")
 }

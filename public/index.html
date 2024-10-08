@@ -10,14 +10,14 @@
   <link rel="stylesheet" href="/public/css/output.css">
 </head>
 
-<body class="">
+<body>
 
   <!-- header start -->
-  <header id="home" class="bg-transparent fixed left-0 top-0 w-full flex items-center dark:text-white">
+  <header class="bg-transparent fixed left-0 top-0 w-full flex items-center dark:text-white">
     <div class="container">
       <div class="flex justify-between items-center relative w-full">
         <div class="p-4">
-          <a href="#home" class="text-gradient font-bold text-lg lg:text-2xl">Ekoyusron</a>
+          <a href="#home" class="text-gradient font-bold text-lg lg:text-2xl hover:gradientotol">Ekoyusron</a>
         </div>
 
         <div class="flex p-4 items-center">
@@ -31,13 +31,20 @@
         <nav id="menu"
           class="bg-white absolute top-full right-3 py-4 shadow-xl rounded-xl hidden max-w-[250px] w-full lg:block lg:static lg:justify-self-end lg:rounded-none lg:shadow-none lg:mx-96 lg:bg-transparent lg:w-full">
           <ul class="block lg:flex ">
-            <li><a href="#home" class="hover:text-gradient text-base text-slate-800 font-bold py-2 mx-8">home</a></li>
-            <li><a href="#about" class="hover:text-gradient text-base text-slate-800 font-bold py-2 mx-8">about</a></li>
-            <li><a href="#contact" class="hover:text-gradient text-base text-slate-800 font-bold py-2 mx-8">project</a>
+            <li>
+              <a href="#home" class="hover:textf-gradient text-base text-slate-800 font-medium py-2 mx-8">home</a>
             </li>
-            <li><a href="#contact" class="hover:text-gradient text-base text-slate-800 font-bold py-2 mx-8">carier</a>
+            <li>
+              <a href="#about" class="hover:textf-gradient text-base text-slate-800 font-medium py-2 mx-8">about</a>
             </li>
-            <li><a href="#contact" class="hover:text-gradient text-base text-slate-800 font-bold py-2 mx-8">contact</a>
+            <li>
+              <a href="#project" class="hover:textf-gradient text-base text-slate-800 font-medium py-2 mx-8">project</a>
+            </li>
+            <li>
+              <a href="#blog" class="hover:textf-gradient text-base text-slate-800 font-medium py-2 mx-8">blog</a>
+            </li>
+            <li>
+              <a href="#contatc" class="hover:textf-gradient text-base text-slate-800 font-medium py-2 mx-8">contact</a>
             </li>
           </ul>
         </nav>
@@ -49,12 +56,12 @@
 
 
   <!-- hero section start -->
-  <section class="mt-32 overflow-hidden">
+  <section id="home"  class="mt-32 overflow-hidden">
     <div class="container " data-aos="fade-right" data-aos-duration="3000" data-aos-easing="ease-out-cubic">
       <div class="flex flex-wrap">
         <div class="w-full self-center px-4 lg:w-1/2">
           <h1 class="text-xl text-gradient lg:text-2xl">Hello guys I am <span
-              class="block text-gradient my-1 text-2xl lg:text-4xl lg:mb-4 lg:py-1">Eko Yusron
+              class="block text-gradient my-1 text-2xl lg:text-4xl lg:mb-4 lg:py-1 hover:gradientotol">Eko Yusron
               Ardiyansyah</span></h1>
           <h2 class="text-slate-700 font-medium lg:text-xl">web developer & programmer</h2>
           <p class="text-slate-800 font-medium leading-relaxed mb-5 text-lg">Learning web programming is fun and easy
@@ -85,7 +92,7 @@
   <!-- hero section end -->
 
   <!-- about me section -->
-  <section class="container mt-8" data-aos="fade-up" data-aos-duration="3000" data-aos-easing="ease-out-cubic">
+  <section id="about" class="container mt-8" data-aos="fade-up" data-aos-duration="3000" data-aos-easing="ease-out-cubic">
     <div>
       <div class="flex flex-wrap items-center">
         <!-- about me -->
@@ -373,7 +380,7 @@
         <div class="mb-4">
           <a href="https://simple-suit-game.vercel.app/" target="_blank" class="card-link">
             <p class="text-gradient">Website</p>
-            <p class="text-gradient">https://simple-suit-game.vercel.app/</p>
+            <p class="text-gradient">simple-suit-game.vercel.app/</p>
           </a>
         </div>
       </div>
@@ -387,7 +394,8 @@
         <div class="h-full pt-8 px-4">
           <h1 class="text-2xl font-bold mb-4 text-gradient">SmartphoneList</h1>
           <p class="text-slate-500">
-            The website about smartphone spec and information price in the market,This website build use php and mysqli database
+            The website about smartphone spec and information price in the market,This website build use php and mysqli
+            database
           </p>
 
           <div class="flex flex-wrap gap-2 mt-8">
@@ -396,13 +404,13 @@
             <img src="https://svgl-badge.vercel.app/api/Language/Php?=light" />
             <img src="https://svgl-badge.vercel.app/api/Language/JavaScript?theme=light" />
             <img src="https://svgl-badge.vercel.app/api/Database/MySQL?theme=light" />
-            <img src="https://svgl-badge.vercel.app/api/Framework/Bootstrap?theme=light" />  
+            <img src="https://svgl-badge.vercel.app/api/Framework/Bootstrap?theme=light" />
           </div>
         </div>
         <div class="mb-4">
           <a href="https://github.com/Ekoysrn/smartphoneList" target="_blank" class="card-link">
             <p class="text-gradient">Website</p>
-            <p class="text-gradient">https://github.com/Ekoysrn/smartphoneList</p>
+            <p class="text-gradient">github.com/Ekoysrn/smartphoneList</p>
           </a>
         </div>
       </div>
@@ -427,7 +435,7 @@
         <div class="mb-4">
           <a href="https://survey-form-fans-jkt48.vercel.ap" target="_blank" class="card-link">
             <p class="text-gradient">Website</p>
-            <p class="text-gradient">https://survey-form-fans-jkt48.vercel.ap</p>
+            <p class="text-gradient">survey-form-fans-jkt48.vercel.ap</p>
           </a>
         </div>
       </div>
@@ -450,34 +458,29 @@
             <img src="https://svgl-badge.vercel.app/api/Language/Php?=light" />
             <img src="https://svgl-badge.vercel.app/api/Language/JavaScript?theme=light" />
             <img src="https://svgl-badge.vercel.app/api/Database/MySQL?theme=light" />
-            <img src="https://svgl-badge.vercel.app/api/Framework/Bootstrap?theme=light" />  
+            <img src="https://svgl-badge.vercel.app/api/Framework/Bootstrap?theme=light" />
           </div>
         </div>
         <div class="mb-4">
           <a href="https://github.com/Ekoysrn/crud-with-php" target="_blank" class="card-link">
             <p class="text-gradient">Website</p>
-            <p class="text-gradient">https://github.com/Ekoysrn/crud-with-php</p>
+            <p class="text-gradient">github.com/Ekoysrn/crud-with-php</p>
           </a>
         </div>
       </div>
       <!-- fourth projecet end -->
-      
+
 
       <div class="card flex flex-col gap-4 p-4 group lg:col-span-2">
         <div class="h-full p-4 lg:p-8 px-4">
           <h1 class="text-2xl font-bold mb-4 text-gradient">More On Github</h1>
           <p class="text-slate-500">
-            Dive into my GitHub repository to discover a diverse array of projects
-            that highlight my skills and passion in programming.
+            Dive into my GitHub repository to discover a diverse array of simple projects during my learning that highlight my skills and passion in programming.
           </p>
         </div>
-  
+
         <div class="mb-4 flex flex-col gap-2">
-          <a
-            href="https://github.com/Ekoysrn"
-            target="_blank"
-            class="card-link"
-          >
+          <a href="https://github.com/Ekoysrn" target="_blank" class="card-link">
             <p class="text-gradient">GitHub</p>
             <p class="text-gradient">https://github.com/Ekoysrn</p>
           </a>
@@ -489,37 +492,179 @@
   <!-- project section end -->
 
   <!-- contact me section start -->
-  <section class="py-10 overflow-hidden" id="contact" data-aos="fade-up" data-aos-duration="3000" data-aos-easing="ease-in-out">
+  <section class="py-10 overflow-hidden" id="contact" data-aos="fade-up" data-aos-duration="3000"
+    data-aos-easing="ease-in-out">
     <div class="container p-4">
       <div class="text-center lg:w-2/4 lg:mx-auto">
         <h1 class="text-gradient text-lg lg:text-2xl">Contact</h1>
-        <h2 class="font-medium my-4 text-slate-700">if you have questions, criticsm, and suggestions, or have ideas and are willing to collaborate, or just drink coffe together.cantact me now</h2>  
+        <h2 class="font-medium my-4 text-slate-700">if you have questions, criticsm, and suggestions, or have ideas and
+          are willing to collaborate, or just drink coffe together contact me now</h2>
       </div>
       <div class="lg:w-2/3 lg:mx-auto">
         <form action="">
           <div class="p-4">
             <label for="name" class="text-gradient text-lg my-4">Name</label>
-            <input type="text" id="name" class="block bg-slate-200 p-4 w-full rounded-lg focus:outline-none focus:ring-1 focus:ring-gradient">
+            <input type="text" id="name"
+              class="block bg-slate-200 p-4 w-full rounded-lg focus:outline-none focus:ring-1 focus:ring-gradient">
           </div>
           <div class="p-4">
             <label for="email" class="text-gradient text-lg my-4">Email</label>
-            <input type="email" id="email" class="block bg-slate-200 p-4 w-full rounded-lg focus:outline-none focus:ring-1 focus:ring-gradient">
+            <input type="email" id="email"
+              class="block bg-slate-200 p-4 w-full rounded-lg focus:outline-none focus:ring-1 focus:ring-gradient">
           </div>
           <div class="p-4">
             <label for="caption" class="text-gradient text-lg my-4">Comment</label>
-            <textarea type="text" id="caption" class="block bg-slate-200 p-4 w-full rounded-lg focus:outline-none focus:ring-1 focus:ring-gradient h-32"></textarea>
+            <textarea type="text" id="caption"
+              class="block bg-slate-200 p-4 w-full rounded-lg focus:outline-none focus:ring-1 focus:ring-gradient h-32"></textarea>
           </div>
           <div class="px-3 my-4">
-          <button class="p-4 w-full rounded-full gradient hover:gradientotol">
-            <a href="" class="text-slate-50">Send</a>
-          </button>
-        </div>
+            <button class="p-4 w-full rounded-full gradient hover:gradientotol">
+              <a href="" class="text-slate-50">Send</a>
+            </button>
+          </div>
         </form>
       </div>
     </div>
   </section>
   <!-- contact me section end -->
 
+  <!-- footer start -->
+  <footer>
+    <div class="bg-slate-900 text-slate-100 mt-16">
+      <div class="container pt-10">
+        <div class="flex flex-wrap align-baseline p-4">
+          <div class="px-4 pt-4 w-full md:w-1/3">
+            <h1 class="text-gradient text-2xl mb-3 hover:gradientotol">Ekoyusron</h1>
+            <h1 class="hover:textf-gradient text-lg md:text-xl font-medium mb-1.5"><a href="">Contact me</a></h1>
+            <h2 class="hover:textf-gradient text-base">ekoyusronardiyansyah02@gmail.com</h2>
+            <p class="text-base hover:textf-gradient">Tirtonirmolo, Kasihan, Bantul,</p>
+            <p class="text-base hover:textf-gradient">Special Region of Yogyakarta</p>
+          </div>
+          <div class="w-full px-4 my-8 md:my-14 md:w-1/3">
+            <h1 class="text-lg mb-1.5 md:text-xl font-medium hover:textf-gradient">Category</h1>
+            <ul>
+              <li><a href="" class="hover:textf-gradient">Programming</a></li>
+              <li><a href="" class="hover:textf-gradient">Cryptocurreny</a></li>
+              <li><a href="" class="hover:textf-gradient">Finance</a></li>
+              <li><a href="" class="hover:textf-gradient">Business</a></li>
+            </ul>
+          </div>
+          <div class="w-full px-4 mb-8 md:my-14 md:w-1/3">
+            <h1 class="text-lg mb-1.5 md:text-xl font-medium hover:textf-gradient">Helpful Links</h1>
+              <ul>
+                <li><a class="hover:textf-gradient" href="#home">Home</a></li>
+                <li><a class="hover:textf-gradient" href="#about">About</a></li>
+                <li><a class="hover:textf-gradient" href="#project">Project</a></li>
+                <li><a class="hover:textf-gradient" href="#blog">Blog</a></li>
+                <li><a class="hover:textf-gradient" href="#contact">Contact</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="w-full flex flex-wrap flex-col-reverse justify-center md:justify-between lg:flex-nowrap lg:flex-row items-center border-t-2 border-slate-600 mt-10 p-8">
+          <div class="w-full text-center md:text-start py-4">
+            <p>&copy; 2024 All rights reserved.</p>
+          </div>
+          <!-- icon social media -->
+          <div class="w-full">
+            <ul class="flex justify-center md:justify-end gap-6 md:gap-8">
+              <!-- facebook start -->
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-600 transition hover:text-gray-500"
+                >
+                  <span class="sr-only">Facebook</span>
+                  <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      fill-rule="evenodd"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <!-- facebook end -->
+
+              <!-- instagram start -->
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-600 transition hover:text-gray-500"
+                >
+                  <span class="sr-only">Instagram</span>
+                  <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <!-- instagam end -->
+
+              <!-- twitter start -->
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-600 transition hover:text-gray-500"
+                >
+                  <span class="sr-only">Twitter</span>
+                  <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" ><path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z"></path></svg>
+                </a>
+              </li>
+              <!-- github end -->
+        
+              <!-- github start -->
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-600 transition hover:text-gray-500"
+                >
+                  <span class="sr-only">GitHub</span>
+                  <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <!-- github end -->
+
+              <!-- youtube start -->
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-600 transition hover:text-gray-500"
+                >
+                  <span class="sr-only">Dribbble</span>
+                  <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" >
+                    <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd"></path>
+                  </svg>
+                </a>
+              </li>
+              <!-- youtube end -->
+            </ul>
+          </div>
+          <!-- icon social media end -->
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-- footer end -->
 
 
   <script src="/public/main.js"></script>

@@ -80,4 +80,4 @@ function comingSoon(){
 function sendWhatsApp(){
   let urlToWhatsApp = `https://wa.me/6287762399040?text=hello nama saya ${nama.value} dan saya mau ${caption.value}`;
   window.open(urlToWhatsApp,"_blank");
-}
+  }

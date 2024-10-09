@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="light" lang="en" class="scroll-smooth">
+<html lang="en" data-theme="light" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -8,44 +8,95 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="shortcut icon" href="/src/images/AkademyCode.jpg" type="image/x-icon">
   <link rel="stylesheet" href="/public/css/output.css">
+  <script>
+    // localstorage tailwindcss
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.dataset.theme = "dark"
+    } else {
+      document.documentElement.dataset.theme = "light"
+    }
+
+    // Whenever the user explicitly chooses light mode
+    localStorage.theme = 'light'
+
+    // Whenever the user explicitly chooses dark mode
+    localStorage.theme = 'dark'
+
+    // Whenever the user explicitly chooses to respect the OS preference
+    localStorage.removeItem('theme')
+  </script>
 </head>
 
 <body>
 
   <!-- header start -->
-  <header class="bg-transparent fixed left-0 top-0 w-full flex items-center dark:text-white">
+  <header class="fixed top-0 left-0 flex items-center w-full bg-transparent z-[999]">
     <div class="container">
-      <div class="flex justify-between items-center relative w-full">
+      <div class="relative flex items-center justify-between w-full">
         <div class="p-4">
-          <a href="#home" class="text-gradient font-bold text-lg lg:text-2xl hover:gradientotol">Ekoyusron</a>
+          <a href="#home" class="text-lg font-bold text-gradient lg:text-2xl hover:gradientotol">Ekoyusron</a>
         </div>
 
-        <div class="flex p-4 items-center">
-          <button type="button" id="btn" class="block absolute right-4 lg:hidden" onclick="hamburger(this)">
-            <span class="x-line gradient origin-top-left duration-300 ease-in-out"></span>
-            <span class="x-line gradient duration-300 ease-in-out"></span>
-            <span class="x-line gradient origin-bottom-left duration-300 ease-in-out"></span>
+        <div class="flex items-center p-4">
+          <button type="button" id="btn" class="absolute block right-4 lg:hidden" onclick="hamburger(this)">
+            <span class="duration-300 ease-in-out origin-top-left x-line gradient"></span>
+            <span class="duration-300 ease-in-out x-line gradient"></span>
+            <span class="duration-300 ease-in-out origin-bottom-left x-line gradient"></span>
           </button>
         </div>
 
         <nav id="menu"
-          class="bg-white absolute top-full right-3 py-4 shadow-xl rounded-xl hidden max-w-[250px] w-full lg:block lg:static lg:justify-self-end lg:rounded-none lg:shadow-none lg:mx-96 lg:bg-transparent lg:w-full">
-          <ul class="block lg:flex ">
-            <li>
-              <a href="#home" class="hover:textf-gradient text-base text-slate-800 font-medium py-2 mx-8">home</a>
-            </li>
-            <li>
-              <a href="#about" class="hover:textf-gradient text-base text-slate-800 font-medium py-2 mx-8">about</a>
-            </li>
-            <li>
-              <a href="#project" class="hover:textf-gradient text-base text-slate-800 font-medium py-2 mx-8">project</a>
-            </li>
-            <li>
-              <a href="#blog" class="hover:textf-gradient text-base text-slate-800 font-medium py-2 mx-8">blog</a>
-            </li>
-            <li>
-              <a href="#contatc" class="hover:textf-gradient text-base text-slate-800 font-medium py-2 mx-8">contact</a>
-            </li>
+          class="bg-white dark:bg-black dark:lg:bg-transparent dark:shadow-slate-50 dark:shadow-sm dark:lg:shadow-none absolute top-full right-3 py-4 shadow-xl rounded-xl hidden max-w-[250px] w-full lg:block lg:static lg:justify-self-end lg:rounded-none lg:shadow-none lg:mx-96 lg:bg-transparent lg:w-full z-[9999999] md:mb-0 mb-4 backdrop-blur-lg lg:items-center"">
+          <ul class=" block lg:items-center lg:flex">
+          <li>
+            <a href="#home"
+              class="py-2 mx-8 text-base font-medium hover:textf-gradient text-slate-800 dark:text-white">home</a>
+          </li>
+          <li>
+            <a href="#about"
+              class="py-2 mx-8 text-base font-medium hover:textf-gradient text-slate-800 dark:text-white">about</a>
+          </li>
+          <li>
+            <a href="#project"
+              class="py-2 mx-8 text-base font-medium hover:textf-gradient text-slate-800 dark:text-white">project</a>
+          </li>
+          <li>
+            <a href="#blog" onclick="comingSoon()"
+              class="py-2 mx-8 text-base font-medium hover:textf-gradient text-slate-800 dark:text-white">blog</a>
+          </li>
+          <li>
+            <a href="#contact"
+              class="py-2 mx-8 text-base font-medium hover:textf-gradient text-slate-800 dark:text-white">contact</a>
+          </li>
+          <li class="hidden lg:flex lg:justify-center lg:items-center">
+            <!-- dark mode toggle -->
+            <label class="swap swap-rotate">
+              <!-- this hidden checkbox controls the state -->
+              <input id="darkToggle" type="checkbox" class="theme-controller" value="" />
+
+              <!-- sun icon -->
+              <svg data-set-theme="light" class="w-6 h-6 fill-current swap-off" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24">
+                <path
+                  d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+              </svg>
+
+              <!-- moon icon -->
+              <svg data-set-theme="dark" class="w-6 h-6 fill-current swap-on" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24">
+                <path
+                  d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+              </svg>
+            </label>
+            <!-- moon icon end -->
+            </label>
+          </li>
+          <li class="mx-8 my-2 lg:hidden">
+            <input id="darkToggleSm" type="checkbox" value=""
+              class="toggle theme-controller col-span-2 col-start-1 row-start-1 border-sky-400 bg-amber-300 [--tglbg:theme(colors.sky.500)] checked:border-blue-800 checked:bg-blue-300 checked:[--tglbg:theme(colors.blue.900)]" />
+            </label>
+          </li>
+          <li></li>
           </ul>
         </nav>
 
@@ -56,28 +107,28 @@
 
 
   <!-- hero section start -->
-  <section id="home"  class="mt-32 overflow-hidden">
-    <div class="container " data-aos="fade-right" data-aos-duration="3000" data-aos-easing="ease-out-cubic">
+  <section id="home" class="overflow-hidden pt-20">
+    <div class="container" data-aos="fade-right" data-aos-duration="3000" data-aos-easing="ease-out-cubic">
       <div class="flex flex-wrap">
-        <div class="w-full self-center px-4 lg:w-1/2">
-          <h1 class="text-xl text-gradient lg:text-2xl">Hello guys I am <span
-              class="block text-gradient my-1 text-2xl lg:text-4xl lg:mb-4 lg:py-1 hover:gradientotol">Eko Yusron
+        <div class="self-center w-full px-4 lg:w-1/2">
+          <h1 class="text-xl text-gradient lg:text-2xl -z-50">Hello guys I am <span
+              class="block my-1 text-2xl text-gradient lg:text-4xl lg:mb-4 lg:py-1 hover:gradientotol -z-50">Eko Yusron
               Ardiyansyah</span></h1>
-          <h2 class="text-slate-700 font-medium lg:text-xl">web developer & programmer</h2>
-          <p class="text-slate-800 font-medium leading-relaxed mb-5 text-lg">Learning web programming is fun and easy
-            :), right? <span class="text-slate-950 font-bold">No!</span></p>
+          <h2 class="font-medium text-slate-700 lg:text-xl dark:text-slate-200">web developer & programmer</h2>
+          <p class="mb-5 text-lg font-medium leading-relaxed text-slate-800 dark:text-slate-50">Learning web programming
+            is fun and easy, right? <span class="font-bold text-slate-950 dark:text-white">No!</span></p>
 
           <button
-            class="block gradient rounded-full text-white font-bold py-3 px-8 hover:gradientotol duration-300 transition-all ease-in-out shadow-2xl">
-            <a href="#" class="items-center">contact me</a>
+            class="block px-8 py-3 font-bold text-white transition-all duration-300 ease-in-out rounded-full shadow-2xl gradient hover:gradientotol">
+            <a href="#contact" class="items-center">contact me</a>
           </button>
         </div>
 
-        <div class="self-end w-full px-4 relative lg:w-1/2" data-aos="fade-right" data-aos-duration="3000"
+        <div class="relative self-end w-full px-4 lg:w-1/2" data-aos="fade-right" data-aos-duration="3000"
           data-aos-easing="ease-out-cubic">
           <div class="mt-4">
-            <img src="/src/images/x.png" alt="exo" width="261px" height="261px" class="mx-w-full mx-auto">
-            <span class="absolute -z-10 top-0 left-1/2 -translate-x-1/2">
+            <img src="/src/images/x.png" alt="exo" width="261px" height="261px" class="mx-auto mx-w-full">
+            <span class="absolute top-0 -translate-x-1/2 -z-10 left-1/2">
               <svg width="1000px" height="600px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#9EF0F0"
                   d="M31.4,-40.4C38.8,-31.3,41.4,-19.5,44.8,-6.9C48.3,5.8,52.5,19.3,48.4,29.4C44.3,39.4,31.7,46.1,18.4,51.1C5.1,56.2,-8.9,59.7,-24.6,58.1C-40.3,56.5,-57.5,49.8,-66.3,37.1C-75,24.4,-75.1,5.6,-72.3,-13.2C-69.6,-31.9,-63.8,-50.6,-51.3,-58.7C-38.7,-66.8,-19.4,-64.4,-3.7,-60.1C12.1,-55.7,24.1,-49.4,31.4,-40.4Z"
@@ -92,21 +143,23 @@
   <!-- hero section end -->
 
   <!-- about me section -->
-  <section id="about" class="container mt-8" data-aos="fade-up" data-aos-duration="3000" data-aos-easing="ease-out-cubic">
+  <section id="about" class="container pt-20" data-aos="fade-up" data-aos-duration="3000"
+    data-aos-easing="ease-out-cubic">
     <div>
       <div class="flex flex-wrap items-center">
         <!-- about me -->
         <div class="w-full lg:w-1/2 lg:p-4">
-          <h1 class="text-gradient text-xl lg:text-2xl">About me</h1>
-          <h2 class="font-medium text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+          <h1 class="text-xl text-gradient lg:text-2xl">About me</h1>
+          <h2 class="font-medium text-slate-700 dark:text-slate-100">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Dolorem
             dignissimos repellat eum, magni porro doloribus itaque nemo illum qui doloremque molestiae unde eos,
             deleniti id. Similique optio quo fugit nostrum.</h2>
-          <h1 class="text-gradient text-lg mt-4">tech stack</h1>
+          <h1 class="mt-4 text-lg text-gradient">tech stack</h1>
 
           <!-- icon tech stack start -->
           <div class="flex items-center gap-2 py-3">
             <!-- html start-->
-            <div id="htmlicon" class="h-8 w-8 group tooltip" data-tip="html">
+            <div id="htmlicon" class="w-8 h-8 group tooltip" data-tip="html">
               <a href="https://camo.githubusercontent.com/e251e8fab79eebd3a8d64b56a14b720cb190e56ed590f747042ec04d990a543b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d656b6f7973726e266c6f63616c653d656e266c61796f75743d636f6d70616374267468656d653d6461726b26686964655f626f726465723d747275652662675f636f6c6f723d31373137313726636172645f77696474683d383030"
                 target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520">
@@ -120,7 +173,7 @@
             <!-- html end -->
 
             <!-- css start-->
-            <div class="h-8 w-8 tooltip" data-tip="css">
+            <div class="w-8 h-8 tooltip" data-tip="css">
               <a href="https://camo.githubusercontent.com/e251e8fab79eebd3a8d64b56a14b720cb190e56ed590f747042ec04d990a543b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d656b6f7973726e266c6f63616c653d656e266c61796f75743d636f6d70616374267468656d653d6461726b26686964655f626f726465723d747275652662675f636f6c6f723d31373137313726636172645f77696474683d383030"
                 target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520">
@@ -134,7 +187,7 @@
             <!-- css end -->
 
             <!-- javascript start-->
-            <div class="h-8 w-8 tooltip" data-tip="javascript">
+            <div class="w-8 h-8 tooltip" data-tip="javascript">
               <a href="https://camo.githubusercontent.com/e251e8fab79eebd3a8d64b56a14b720cb190e56ed590f747042ec04d990a543b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d656b6f7973726e266c6f63616c653d656e266c61796f75743d636f6d70616374267468656d653d6461726b26686964655f626f726465723d747275652662675f636f6c6f723d31373137313726636172645f77696474683d383030"
                 target="_blank">
 
@@ -149,7 +202,7 @@
             <!-- javascript end -->
 
             <!-- boostrap start-->
-            <div class="h-14 w-10 flex justify-center items-center tooltip" data-tip="Boostrap">
+            <div class="flex items-center justify-center w-10 h-14 tooltip" data-tip="Boostrap">
               <svg viewBox="0 0 256 204" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
                 <path fill="#7E13F8"
                   d="M53.172 0C38.565 0 27.756 12.785 28.24 26.65c.465 13.32-.139 30.573-4.482 44.642C19.402 85.402 12.034 94.34 0 95.488v12.956c12.034 1.148 19.402 10.086 23.758 24.197 4.343 14.069 4.947 31.32 4.482 44.641-.484 13.863 10.325 26.65 24.934 26.65h149.673c14.608 0 25.414-12.785 24.93-26.65-.464-13.32.139-30.572 4.482-44.641 4.359-14.11 11.707-23.05 23.741-24.197V95.488c-12.034-1.148-19.382-10.086-23.74-24.196-4.344-14.067-4.947-31.321-4.483-44.642C228.261 12.787 217.455 0 202.847 0H53.17h.002ZM173.56 125.533c0 19.092-14.24 30.67-37.872 30.67h-40.23a4.339 4.339 0 0 1-4.338-4.339V52.068a4.339 4.339 0 0 1 4.339-4.34h39.999c19.705 0 32.637 10.675 32.637 27.063 0 11.503-8.7 21.801-19.783 23.604v.601c15.089 1.655 25.248 12.104 25.248 26.537Zm-42.26-64.05h-22.937v32.4h19.32c14.934 0 23.17-6.014 23.17-16.764 0-10.073-7.082-15.636-19.552-15.636Zm-22.937 45.256v35.705h23.782c15.548 0 23.786-6.239 23.786-17.965 0-11.728-8.467-17.742-24.786-17.742h-22.782v.002Z" />
@@ -161,7 +214,7 @@
             <a href="https://camo.githubusercontent.com/e251e8fab79eebd3a8d64b56a14b720cb190e56ed590f747042ec04d990a543b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d656b6f7973726e266c6f63616c653d656e266c61796f75743d636f6d70616374267468656d653d6461726b26686964655f626f726465723d747275652662675f636f6c6f723d31373137313726636172645f77696474683d383030"
               target="_blank">
 
-              <div class="h-8 w-8 flex justify-center items-center tooltip" data-tip="tailwind">
+              <div class="flex items-center justify-center w-8 h-8 tooltip" data-tip="tailwind">
                 <svg viewBox="0 0 256 154" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
                   <defs>
                     <linearGradient x1="-2.778%" y1="32%" x2="100%" y2="67.556%" id="gradient">
@@ -177,7 +230,7 @@
               <!-- tailwind end -->
 
               <!-- git start -->
-              <div class="h8 w-8 tooltip" data-tip="git">
+              <div class="w-8 h8 tooltip" data-tip="git">
                 <a href="https://camo.githubusercontent.com/e251e8fab79eebd3a8d64b56a14b720cb190e56ed590f747042ec04d990a543b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d656b6f7973726e266c6f63616c653d656e266c61796f75743d636f6d70616374267468656d653d6461726b26686964655f626f726465723d747275652662675f636f6c6f723d31373137313726636172645f77696474683d383030"
                   target="_blank">
 
@@ -190,7 +243,7 @@
               <!-- git end -->
 
               <!-- vscode start -->
-              <div class="h8 w-8 tooltip" data-tip="Visual Studio Code">
+              <div class="w-8 h8 tooltip" data-tip="Visual Studio Code">
                 <a href="https://camo.githubusercontent.com/e251e8fab79eebd3a8d64b56a14b720cb190e56ed590f747042ec04d990a543b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d656b6f7973726e266c6f63616c653d656e266c61796f75743d636f6d70616374267468656d653d6461726b26686964655f626f726465723d747275652662675f636f6c6f723d31373137313726636172645f77696474683d383030"
                   target="_blank">
 
@@ -226,11 +279,12 @@
 
         <!-- lets be friends -->
         <div class="w-full lg:w-1/2 lg:p-4">
-          <h1 class="text-gradient text-xl lg:text-2xl">Let's be friends and colaboration</h1>
-          <h2 class="font-medium text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+          <h1 class="text-xl text-gradient lg:text-2xl">Let's be friends and colaboration</h1>
+          <h2 class="font-medium text-slate-700 dark:text-slate-50">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Dolorem
             dignissimos repellat eum, magni porro doloribus itaque nemo illum qui doloremque molestiae unde eos,
             deleniti id. Similique optio quo fugit nostrum.</h2>
-          <h1 class="text-gradient text-lg mt-4">contact</h1>
+          <h1 class="mt-4 text-lg text-gradient">contact</h1>
 
           <!-- icon contact start -->
           <div class="flex items-center gap-2 py-[20px]">
@@ -238,7 +292,8 @@
             <!-- github start -->
             <div class="w-8 h-8 tooltip" data-tip="github">
               <a href="https://github.com/Ekoysrn" target="_blank">
-                <svg viewBox="0 0 256 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                <svg viewBox="0 0 256 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
+                  id="github">
                   <path
                     d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z" />
                 </svg>
@@ -247,7 +302,7 @@
             <!-- github end -->
 
             <!-- whatsapp icon svg start-->
-            <div class="h-8 w-8 tooltip" data-tip="whatsapp">
+            <div class="w-8 h-8 tooltip" data-tip="whatsapp">
               <a href="https://wa.me/87762399040" target="_blank">
                 <svg viewBox="0 0 256 259" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
                   <path
@@ -263,7 +318,7 @@
 
             <!-- instagram svg start  -->
             <a href="https://www.instagram.com/ysrnar_/" target="_blank">
-              <div class="h-10 w-10 flex items-center justify-center tooltip" data-tip="instagram">
+              <div class="flex items-center justify-center w-10 h-10 tooltip" data-tip="instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
                   <radialGradient id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1" cx="19.38" cy="42.035" r="44.899"
                     gradientUnits="userSpaceOnUse">
@@ -300,7 +355,7 @@
 
             <!-- twitter icon svg start-->
             <a href="https://x.com/ekoyusron_" target="_blank">
-              <div class="w-8 h-8 flex justify-center items-center tooltip" data-tip="twitter">
+              <div class="flex items-center justify-center w-8 h-8 tooltip" data-tip="twitter">
                 <svg viewBox="0 0 256 209" width="256" height="209" xmlns="http://www.w3.org/2000/svg"
                   preserveAspectRatio="xMidYMid">
                   <path
@@ -325,7 +380,7 @@
 
             <!-- tiktok icon start-->
             <a href="https://www.tiktok.com/@ez.blass_" target="_blank">
-              <div class="h-7 w-7 flex items-center justify-center tooltip" data-tip="TikTok">
+              <div class="flex items-center justify-center h-7 w-7 tooltip" data-tip="TikTok">
                 <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 290">
                   <path fill="#FF004F"
                     d="M189.72022 104.42148c18.67797 13.3448 41.55932 21.19661 66.27233 21.19661V78.08728c-4.67694.001-9.34196-.48645-13.91764-1.4554v37.41351c-24.71102 0-47.5894-7.85181-66.27232-21.19563v96.99656c0 48.5226-39.35537 87.85513-87.8998 87.85513-18.11308 0-34.94847-5.47314-48.93361-14.85978 15.96175 16.3122 38.22162 26.4315 62.84826 26.4315 48.54742 0 87.90477-39.33253 87.90477-87.85712v-96.99457h-.00199Zm17.16896-47.95275c-9.54548-10.4231-15.81283-23.89299-17.16896-38.78453v-6.11347h-13.18894c3.31982 18.92715 14.64335 35.09738 30.3579 44.898ZM69.67355 225.60685c-5.33316-6.9891-8.21517-15.53882-8.20226-24.3298 0-22.19236 18.0009-40.18631 40.20915-40.18631 4.13885-.001 8.2529.6324 12.19716 1.88328v-48.59308c-4.60943-.6314-9.26154-.89945-13.91167-.80117v37.82253c-3.94726-1.25089-8.06328-1.88626-12.20313-1.88229-22.20825 0-40.20815 17.99196-40.20815 40.1873 0 15.6937 8.99747 29.28075 22.1189 35.89954Z" />
@@ -348,25 +403,25 @@
   <!-- about me section -->
 
   <!-- project section start-->
-  <section id="project" class="pt-20 pb-12 overflow-x-hidden bg-slate-100 " data-aos="fade-up" data-aos-duration="3000"
-    data-aos-easing="ease-in-out">
+  <section id="project" class="pt-20 pb-12 overflow-x-hidden bg-slate-100 dark:bg-slate-950 " data-aos="fade-up"
+    data-aos-duration="3000" data-aos-easing="ease-in-out">
     <div class="container my-4">
-      <div class="w-full px-4 max-w-xl mx-auto text-center">
-        <h1 class=" text-gradient text-xl lg:text-2xl">Latest Project</h1>
-        <p class="text-slate-700 text-base my-3 lg:font-medium">beberapa project adalah hasil dan study case
-          selama belajar pemogramman web.</p>
+      <div class="w-full max-w-xl px-4 mx-auto text-center">
+        <h1 class="text-xl text-gradient lg:text-2xl">Latest Project</h1>
+        <p class="my-3 text-base text-slate-700 lg:font-medium dark:text-slate-100">Simple projects are the results and
+          study cases while learning web programming.</p>
       </div>
     </div>
 
-    <div class="mt-16 w-80 grid mx-auto grid-cols-1 lg:w-full lg:grid-cols-2 gap-8 xl:max-w-5xl xl:mx-auto">
+    <div class="grid grid-cols-1 gap-8 mx-auto mt-16 w-80 lg:w-full lg:grid-cols-2 xl:max-w-5xl xl:mx-auto">
 
       <!-- first project -->
-      <div class="card flex flex-col gap-4 p-4 group">
-        <div class="card-img transition-all duration-500">
+      <div class="flex flex-col gap-4 p-4 card group">
+        <div class="transition-all duration-500 card-img">
           <img src="/src/images/screenshot/suit.png" alt="" />
         </div>
-        <div class="h-full pt-8 px-4">
-          <h1 class="text-2xl font-bold mb-4 text-gradient">Suit Game </h1>
+        <div class="h-full px-4 pt-8">
+          <h1 class="mb-4 text-2xl font-bold text-gradient">Suit Game </h1>
           <p class="text-slate-500">
             The simple project build use javascript html and css
           </p>
@@ -387,12 +442,12 @@
       <!-- first project end -->
 
       <!-- second project start -->
-      <div class="card flex flex-col gap-4 p-4 group">
-        <div class="card-img transition-all duration-500">
+      <div class="flex flex-col gap-4 p-4 card group">
+        <div class="transition-all duration-500 card-img">
           <img src="/src/images/screenshot/smartphonelist.png" alt="" />
         </div>
-        <div class="h-full pt-8 px-4">
-          <h1 class="text-2xl font-bold mb-4 text-gradient">SmartphoneList</h1>
+        <div class="h-full px-4 pt-8">
+          <h1 class="mb-4 text-2xl font-bold text-gradient">SmartphoneList</h1>
           <p class="text-slate-500">
             The website about smartphone spec and information price in the market,This website build use php and mysqli
             database
@@ -417,12 +472,12 @@
       <!-- second project end -->
 
       <!-- third project start -->
-      <div class="card flex flex-col gap-4 p-4 group">
-        <div class="card-img transition-all duration-500">
+      <div class="flex flex-col gap-4 p-4 card group">
+        <div class="transition-all duration-500 card-img">
           <img src="/src/images/screenshot/formpage.png" alt="" />
         </div>
-        <div class="h-full pt-8 px-4">
-          <h1 class="text-2xl font-bold mb-4 text-gradient">Survey Form Fans</h1>
+        <div class="h-full px-4 pt-8">
+          <h1 class="mb-4 text-2xl font-bold text-gradient">Survey Form Fans</h1>
           <p class="text-slate-500">
             This website for form survey fans build use html and css
           </p>
@@ -442,12 +497,12 @@
       <!-- third project end -->
 
       <!-- fourth project start -->
-      <div class="card flex flex-col gap-4 p-4 group">
-        <div class="card-img transition-all duration-500">
+      <div class="flex flex-col gap-4 p-4 card group">
+        <div class="transition-all duration-500 card-img">
           <img src="/src/images/screenshot/tablemember.png" alt="" />
         </div>
-        <div class="h-full pt-8 px-4">
-          <h1 class="text-2xl font-bold mb-4 text-gradient">List Table Member</h1>
+        <div class="h-full px-4 pt-8">
+          <h1 class="mb-4 text-2xl font-bold text-gradient">List Table Member</h1>
           <p class="text-slate-500">
             this website build for study case learning php mysqli
           </p>
@@ -471,15 +526,16 @@
       <!-- fourth projecet end -->
 
 
-      <div class="card flex flex-col gap-4 p-4 group lg:col-span-2">
-        <div class="h-full p-4 lg:p-8 px-4">
-          <h1 class="text-2xl font-bold mb-4 text-gradient">More On Github</h1>
+      <div class="flex flex-col gap-4 p-4 card group lg:col-span-2">
+        <div class="h-full p-4 px-4 lg:p-8">
+          <h1 class="mb-4 text-2xl font-bold text-gradient">More On Github</h1>
           <p class="text-slate-500">
-            Dive into my GitHub repository to discover a diverse array of simple projects during my learning that highlight my skills and passion in programming.
+            Dive into my GitHub repository to discover a diverse array of simple projects during my learning that
+            highlight my skills and passion in programming.
           </p>
         </div>
 
-        <div class="mb-4 flex flex-col gap-2">
+        <div class="flex flex-col gap-2 mb-4">
           <a href="https://github.com/Ekoysrn" target="_blank" class="card-link">
             <p class="text-gradient">GitHub</p>
             <p class="text-gradient">https://github.com/Ekoysrn</p>
@@ -492,34 +548,35 @@
   <!-- project section end -->
 
   <!-- contact me section start -->
-  <section class="py-10 overflow-hidden" id="contact" data-aos="fade-up" data-aos-duration="3000"
+  <section class="pt-28 overflow-hidden" id="contact" >
+    <div class="container p-4" data-aos="fade-up" data-aos-duration="3000"
     data-aos-easing="ease-in-out">
-    <div class="container p-4">
       <div class="text-center lg:w-2/4 lg:mx-auto">
-        <h1 class="text-gradient text-lg lg:text-2xl">Contact</h1>
-        <h2 class="font-medium my-4 text-slate-700">if you have questions, criticsm, and suggestions, or have ideas and
+        <h1 class="text-lg text-gradient lg:text-2xl">Contact</h1>
+        <h2 class="my-4 font-medium text-slate-700 dark:text-slate-100">if you have questions, criticsm, and
+          suggestions, or have ideas and
           are willing to collaborate, or just drink coffe together contact me now</h2>
       </div>
       <div class="lg:w-2/3 lg:mx-auto">
-        <form action="">
+        <form action="" onsubmit="sendWhatsApp()">
           <div class="p-4">
-            <label for="name" class="text-gradient text-lg my-4">Name</label>
-            <input type="text" id="name"
-              class="block bg-slate-200 p-4 w-full rounded-lg focus:outline-none focus:ring-1 focus:ring-gradient">
+            <label for="nama" class="my-4 text-lg text-gradient">Name</label>
+            <input type="text" id="nama"
+              class="block w-full dark:text-black p-4 rounded-lg bg-slate-200 focus:outline-none focus:ring-1 focus:ring-gradient">
           </div>
           <div class="p-4">
-            <label for="email" class="text-gradient text-lg my-4">Email</label>
+            <label for="email" class="my-4 text-lg text-gradient">Email</label>
             <input type="email" id="email"
-              class="block bg-slate-200 p-4 w-full rounded-lg focus:outline-none focus:ring-1 focus:ring-gradient">
+              class="block w-full dark:text-black p-4 rounded-lg bg-slate-200 focus:outline-none focus:ring-1 focus:ring-gradient">
           </div>
           <div class="p-4">
-            <label for="caption" class="text-gradient text-lg my-4">Comment</label>
+            <label for="caption" class="my-4 text-lg text-gradient">Comment</label>
             <textarea type="text" id="caption"
-              class="block bg-slate-200 p-4 w-full rounded-lg focus:outline-none focus:ring-1 focus:ring-gradient h-32"></textarea>
+              class="block w-full dark:text-black h-32 p-4 rounded-lg bg-slate-200 focus:outline-none focus:ring-1 focus:ring-gradient"></textarea>
           </div>
           <div class="px-3 my-4">
-            <button class="p-4 w-full rounded-full gradient hover:gradientotol">
-              <a href="" class="text-slate-50">Send</a>
+            <button class="w-full text-slate-50 p-4 rounded-full gradient hover:gradientotol" type="submit">
+              send
             </button>
           </div>
         </form>
@@ -528,15 +585,16 @@
   </section>
   <!-- contact me section end -->
 
+
   <!-- footer start -->
   <footer>
-    <div class="bg-slate-900 text-slate-100 mt-16">
-      <div class="container pt-10">
-        <div class="flex flex-wrap align-baseline p-4">
-          <div class="px-4 pt-4 w-full md:w-1/3">
-            <h1 class="text-gradient text-2xl mb-3 hover:gradientotol">Ekoyusron</h1>
+    <div class="mt-16 bg-slate-900 text-slate-100">
+      <div class="container pt-10 ">
+        <div class="flex flex-wrap p-4 align-baseline">
+          <div class="w-full px-4 pt-4 md:w-1/3">
+            <h1 class="mb-3 text-2xl text-gradient hover:gradientotol">Ekoyusron</h1>
             <h1 class="hover:textf-gradient text-lg md:text-xl font-medium mb-1.5"><a href="">Contact me</a></h1>
-            <h2 class="hover:textf-gradient text-base">ekoyusronardiyansyah02@gmail.com</h2>
+            <h2 class="text-base hover:textf-gradient">ekoyusronardiyansyah02@gmail.com</h2>
             <p class="text-base hover:textf-gradient">Tirtonirmolo, Kasihan, Bantul,</p>
             <p class="text-base hover:textf-gradient">Special Region of Yogyakarta</p>
           </div>
@@ -551,37 +609,31 @@
           </div>
           <div class="w-full px-4 mb-8 md:my-14 md:w-1/3">
             <h1 class="text-lg mb-1.5 md:text-xl font-medium hover:textf-gradient">Helpful Links</h1>
-              <ul>
-                <li><a class="hover:textf-gradient" href="#home">Home</a></li>
-                <li><a class="hover:textf-gradient" href="#about">About</a></li>
-                <li><a class="hover:textf-gradient" href="#project">Project</a></li>
-                <li><a class="hover:textf-gradient" href="#blog">Blog</a></li>
-                <li><a class="hover:textf-gradient" href="#contact">Contact</a></li>
-              </ul>
+            <ul>
+              <li><a class="hover:textf-gradient" href="#home">Home</a></li>
+              <li><a class="hover:textf-gradient" href="#about">About</a></li>
+              <li><a class="hover:textf-gradient" href="#project">Project</a></li>
+              <li><a class="hover:textf-gradient" onclick="comingSoon()" href="#blog">Blog</a></li>
+              <li><a class="hover:textf-gradient" href="#contact">Contact</a></li>
+            </ul>
           </div>
         </div>
-        <div class="w-full flex flex-wrap flex-col-reverse justify-center md:justify-between lg:flex-nowrap lg:flex-row items-center border-t-2 border-slate-600 mt-10 p-8">
-          <div class="w-full text-center md:text-start py-4">
+        <div
+          class="flex flex-col-reverse flex-wrap items-center justify-center w-full p-8 mt-10 border-t-2 md:justify-between lg:flex-nowrap lg:flex-row border-slate-600">
+          <div class="w-full py-4 text-center md:text-start">
             <p>&copy; 2024 All rights reserved.</p>
           </div>
           <!-- icon social media -->
           <div class="w-full">
-            <ul class="flex justify-center md:justify-end gap-6 md:gap-8">
+            <ul class="flex justify-center gap-6 md:justify-end md:gap-8">
               <!-- facebook start -->
               <li>
-                <a
-                  href="#"
-                  rel="noreferrer"
-                  target="_blank"
-                  class="text-gray-600 transition hover:text-gray-500"
-                >
+                <a href="#" rel="noreferrer" target="_blank" class="text-gray-600 transition hover:text-gray-500">
                   <span class="sr-only">Facebook</span>
                   <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      fill-rule="evenodd"
+                    <path fill-rule="evenodd"
                       d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                      clip-rule="evenodd"
-                    />
+                      clip-rule="evenodd" />
                   </svg>
                 </a>
               </li>
@@ -589,19 +641,12 @@
 
               <!-- instagram start -->
               <li>
-                <a
-                  href="#"
-                  rel="noreferrer"
-                  target="_blank"
-                  class="text-gray-600 transition hover:text-gray-500"
-                >
+                <a href="#" rel="noreferrer" target="_blank" class="text-gray-600 transition hover:text-gray-500">
                   <span class="sr-only">Instagram</span>
                   <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      fill-rule="evenodd"
+                    <path fill-rule="evenodd"
                       d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                      clip-rule="evenodd"
-                    />
+                      clip-rule="evenodd" />
                   </svg>
                 </a>
               </li>
@@ -609,33 +654,25 @@
 
               <!-- twitter start -->
               <li>
-                <a
-                  href="#"
-                  rel="noreferrer"
-                  target="_blank"
-                  class="text-gray-600 transition hover:text-gray-500"
-                >
+                <a href="#" rel="noreferrer" target="_blank" class="text-gray-600 transition hover:text-gray-500">
                   <span class="sr-only">Twitter</span>
-                  <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" ><path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z"></path></svg>
+                  <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z">
+                    </path>
+                  </svg>
                 </a>
               </li>
               <!-- github end -->
-        
+
               <!-- github start -->
               <li>
-                <a
-                  href="#"
-                  rel="noreferrer"
-                  target="_blank"
-                  class="text-gray-600 transition hover:text-gray-500"
-                >
+                <a href="#" rel="noreferrer" target="_blank" class="text-gray-600 transition hover:text-gray-500">
                   <span class="sr-only">GitHub</span>
                   <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      fill-rule="evenodd"
+                    <path fill-rule="evenodd"
                       d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                      clip-rule="evenodd"
-                    />
+                      clip-rule="evenodd" />
                   </svg>
                 </a>
               </li>
@@ -643,15 +680,12 @@
 
               <!-- youtube start -->
               <li>
-                <a
-                  href="#"
-                  rel="noreferrer"
-                  target="_blank"
-                  class="text-gray-600 transition hover:text-gray-500"
-                >
+                <a href="#" rel="noreferrer" target="_blank" class="text-gray-600 transition hover:text-gray-500">
                   <span class="sr-only">Dribbble</span>
-                  <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" >
-                    <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd"></path>
+                  <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
+                      clip-rule="evenodd"></path>
                   </svg>
                 </a>
               </li>

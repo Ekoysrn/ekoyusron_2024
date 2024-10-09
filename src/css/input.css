@@ -23,13 +23,13 @@
   }
 
   .nav-fixed{
-    @apply bg-white z-50;
+    @apply z-[9999] bg-white;
     backdrop-filter: blur(20px);
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.0);  
   }
 
   .nav{
-    @apply bg-white z-50;
+    @apply z-[9999] bg-white;
     backdrop-filter: blur(20px);
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.0);  
   }
@@ -56,13 +56,14 @@
 
 /* card */
 .card {
-  @apply bg-white text-justify hover:bg-cyan-500 bg-opacity-10 hover:bg-opacity-10 backdrop-blur-sm hover:backdrop-blur-md rounded-3xl border transition-all duration-500 shadow-xl hover:bg-gradient-to-r from-cyan-100 to-blue-100  text-white overflow-clip;
+  @apply text-justify text-white transition-all duration-500 bg-white shadow-xl dark:border-slate-700 hover:bg-cyan-500 bg-opacity-10 hover:bg-opacity-10 dark:hover:bg-opacity-0 backdrop-blur-sm hover:backdrop-blur-md rounded-3xl overflow-clip border-slate-400 dark:hover:shadow-slate-300 dark:hover:shadow-md;
 }
 
+
 .card-img {
-  @apply rounded-xl h-52 duration-500 group-hover:border-cyan-500 brightness-75 group-hover:brightness-100 border-cyan-500 group-hover:transition-all group-hover:duration-500 overflow-clip;
+  @apply duration-500 rounded-xl h-52 group-hover:border-cyan-500 brightness-75 group-hover:brightness-100 border-cyan-500 group-hover:transition-all group-hover:duration-500 overflow-clip;
 }
 
 .card-link {
-  @apply flex justify-between border group-hover:border-cyan-500 flex-wrap px-4 py-3 overflow-clip bg-cyan-200 bg-opacity-10 hover:bg-opacity-25 transition-all duration-500 rounded-xl mx-4 cursor-pointer shadow-md;
+  @apply flex flex-wrap justify-between px-4 py-3 mx-4 transition-all duration-500 dark:border-slate-700 shadow-md cursor-pointer group-hover:border-cyan-500 overflow-clip bg-cyan-200 bg-opacity-10 hover:bg-opacity-25 rounded-xl;
 }

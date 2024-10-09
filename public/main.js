@@ -1,5 +1,6 @@
-const menu = document.querySelector("#menu");
 
+
+// scrooling on navbar
 window.onscroll = function(){
   const header = document.querySelector("header")
   const fixedNav = header.offsetTop;
@@ -11,14 +12,72 @@ window.onscroll = function(){
     header.classList.remove("nav-fixed");
   }
 }
+// target hamburger
+const btn = document.querySelector("#btn");
+const menu = document.querySelector("#menu");
 
-let func = "function";
 
+// hamburger
 function hamburger(e){
   e.classList.toggle("hamburger-active");
   menu.classList.toggle("hidden")
 }
 
-let funct = () => {
-  console.log("heder")
+//click anywhere
+// window.addEventListener("click", e => {
+//   if(e.target != btn && e.target != menu){
+//     btn.classList.remove("hamburger-active");
+//     menu.classList.add("hidden")
+//   }
+// })
+
+// target darkMode Toggle
+const darkToggle = document.querySelector("#darkToggle");
+const html = document.documentElement;
+const darkToggleSm = document.querySelector("#darkToggleSm");
+const github = document.querySelector("#github");
+
+// darkMode
+function toggleTheme(isDark){
+  html.dataset.theme = isDark ? "dark" : "light";
+  darkToggle.checked = isDark;
+  darkToggleSm.checked = isDark;
+  
+  if(isDark){
+    github.setAttribute("fill","#fff");
+    localStorage.theme = "dark"
+  }else{
+    github.removeAttribute("fill");
+    localStorage.theme = "light"
+  };
+}
+
+// if input checked
+darkToggle.addEventListener("click",()=>{
+  toggleTheme(darkToggle.checked)
+})
+
+darkToggleSm.addEventListener("click",()=>{
+  toggleTheme(darkToggleSm.checked)
+});
+
+// localstorage matchMedia
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  darkToggle.checked = true;
+  darkToggleSm.checked = true;
+} else {
+  darkToggle.checked = false;
+  darkToggleSm.checked = false;
+};
+
+//alert coming soon 
+function comingSoon(){
+  alert("stay tuned, coming soon")
+};
+
+//whatsApp message
+
+function sendWhatsApp(){
+  let urlToWhatsApp = `https://wa.me/6287762399040?text=hello nama saya ${nama.value} dan saya mau ${caption.value}`;
+  window.open(urlToWhatsApp,"_blank");
 }

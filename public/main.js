@@ -80,11 +80,11 @@ darkToggleSm.addEventListener("click",()=>{
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
   darkToggle.checked = true;
   darkToggleSm.checked = true;
-  techBadge(theme)
+  
 } else {
   darkToggle.checked = false;
   darkToggleSm.checked = false;
-  techBadge(theme)
+  
 };
 
 //alert coming soon 

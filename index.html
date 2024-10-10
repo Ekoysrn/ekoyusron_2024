@@ -30,7 +30,7 @@
 <body>
 
   <!-- header start -->
-  <header class="fixed top-0 left-0 flex items-center w-full bg-transparent z-[999]">
+  <header class="fixed backdrop-blur-lg bg-transparent dark:bg-transparent top-0 left-0 flex items-center w-full z-10">
     <div class="container">
       <div class="relative flex items-center justify-between w-full">
         <div class="p-4">
@@ -46,57 +46,54 @@
         </div>
 
         <nav id="menu"
-          class="bg-white dark:bg-black dark:lg:bg-transparent dark:shadow-slate-50 dark:shadow-sm dark:lg:shadow-none absolute top-full right-3 py-4 shadow-xl rounded-xl hidden max-w-[250px] w-full lg:block lg:static lg:justify-self-end lg:rounded-none lg:shadow-none lg:mx-96 lg:bg-transparent lg:w-full z-[9999999] md:mb-0 mb-4 backdrop-blur-lg lg:items-center"">
-          <ul class=" block lg:items-center lg:flex">
-          <li>
-            <a href="#home"
-              class="py-2 mx-8 text-base font-medium hover:textf-gradient text-slate-800 dark:text-white">home</a>
-          </li>
-          <li>
-            <a href="#about"
-              class="py-2 mx-8 text-base font-medium hover:textf-gradient text-slate-800 dark:text-white">about</a>
-          </li>
-          <li>
-            <a href="#project"
-              class="py-2 mx-8 text-base font-medium hover:textf-gradient text-slate-800 dark:text-white">project</a>
-          </li>
-          <li>
-            <a href="#blog" onclick="comingSoon()"
-              class="py-2 mx-8 text-base font-medium hover:textf-gradient text-slate-800 dark:text-white">blog</a>
-          </li>
-          <li>
-            <a href="#contact"
-              class="py-2 mx-8 text-base font-medium hover:textf-gradient text-slate-800 dark:text-white">contact</a>
-          </li>
-          <li class="hidden lg:flex lg:justify-center lg:items-center">
-            <!-- dark mode toggle -->
-            <label class="swap swap-rotate">
-              <!-- this hidden checkbox controls the state -->
-              <input id="darkToggle" type="checkbox" class="theme-controller" value="" />
+          class="bg-white dark:bg-black dark:lg:bg-transparent dark:shadow-slate-50 dark:shadow-sm dark:lg:shadow-none absolute top-full right-3 py-4 shadow-xl rounded-xl hidden max-w-[250px] w-full lg:block lg:static lg:justify-self-end lg:rounded-none lg:shadow-none lg:mx-96 lg:bg-transparent lg:w-full md:mb-0 z-20 mb-4 lg:items-center">
+          <ul class="block lg:items-center lg:flex">
+            <li>
+              <a href="#home"
+                class="py-2 mx-8 text-base font-medium hover:textf-gradient text-slate-800 dark:text-white">home</a>
+            </li>
+            <li>
+              <a href="#about"
+                class="py-2 mx-8 text-base font-medium hover:textf-gradient text-slate-800 dark:text-white">about</a>
+            </li>
+            <li>
+              <a href="#project"
+                class="py-2 mx-8 text-base font-medium hover:textf-gradient text-slate-800 dark:text-white">project</a>
+            </li>
+            <li>
+              <a href="#blog" onclick="comingSoon()"
+                class="py-2 mx-8 text-base font-medium hover:textf-gradient text-slate-800 dark:text-white">blog</a>
+            </li>
+            <li>
+              <a href="#contact"
+                class="py-2 mx-8 text-base font-medium hover:textf-gradient text-slate-800 dark:text-white">contact</a>
+            </li>
+            <li class="hidden lg:flex lg:justify-center lg:items-center">
+              <!-- dark mode toggle -->
+              <label class="swap swap-rotate">
+                <!-- this hidden checkbox controls the state -->
+                <input id="darkToggle" type="checkbox" class="theme-controller" value="" />
 
-              <!-- sun icon -->
-              <svg data-set-theme="light" class="w-6 h-6 fill-current swap-off" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24">
-                <path
-                  d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
-              </svg>
+                <!-- sun icon -->
+                <svg data-set-theme="light" class="w-6 h-6 fill-current swap-off" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                </svg>
 
-              <!-- moon icon -->
-              <svg data-set-theme="dark" class="w-6 h-6 fill-current swap-on" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24">
-                <path
-                  d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
-              </svg>
-            </label>
-            <!-- moon icon end -->
-            </label>
-          </li>
-          <li class="mx-8 my-2 lg:hidden">
-            <input id="darkToggleSm" type="checkbox" value=""
-              class="toggle theme-controller col-span-2 col-start-1 row-start-1 border-sky-400 bg-amber-300 [--tglbg:theme(colors.sky.500)] checked:border-blue-800 checked:bg-blue-300 checked:[--tglbg:theme(colors.blue.900)]" />
-            </label>
-          </li>
-          <li></li>
+                <!-- moon icon -->
+                <svg data-set-theme="dark" class="w-6 h-6 fill-current swap-on" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                </svg>
+                <!-- moon icon end -->
+              </label>
+            </li>
+            <li class="mx-8 my-2 lg:hidden">
+              <input id="darkToggleSm" type="checkbox" value=""
+                class="toggle theme-controller col-span-2 col-start-1 row-start-1 border-sky-400 bg-amber-300 [--tglbg:theme(colors.sky.500)] checked:border-blue-800 checked:bg-blue-300 checked:[--tglbg:theme(colors.blue.900)]" />
+            </li>
           </ul>
         </nav>
 
@@ -403,7 +400,7 @@
   <!-- about me section -->
 
   <!-- project section start-->
-  <section id="project" class="pt-20 pb-12 overflow-x-hidden bg-slate-100 dark:bg-slate-950 " data-aos="fade-up"
+  <section id="project" class="pt-20 pb-12 overflow-x-hidden bg-slate-100 dark:bg-slate-950" data-aos="fade-up"
     data-aos-duration="3000" data-aos-easing="ease-in-out">
     <div class="container my-4">
       <div class="w-full max-w-xl px-4 mx-auto text-center">
@@ -427,9 +424,9 @@
           </p>
 
           <div class="flex flex-wrap gap-2 mt-8">
-            <img src="https://svgl-badge.vercel.app/api/Language/HTML5?theme=light" />
-            <img src="https://svgl-badge.vercel.app/api/Language/CSS?theme=light" />
-            <img src="https://svgl-badge.vercel.app/api/Language/JavaScript?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Language/HTML5?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Language/CSS?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Language/JavaScript?theme=light" />
           </div>
         </div>
         <div class="mb-4">
@@ -454,12 +451,12 @@
           </p>
 
           <div class="flex flex-wrap gap-2 mt-8">
-            <img src="https://svgl-badge.vercel.app/api/Language/HTML5?theme=light" />
-            <img src="https://svgl-badge.vercel.app/api/Language/CSS?theme=light" />
-            <img src="https://svgl-badge.vercel.app/api/Language/Php?=light" />
-            <img src="https://svgl-badge.vercel.app/api/Language/JavaScript?theme=light" />
-            <img src="https://svgl-badge.vercel.app/api/Database/MySQL?theme=light" />
-            <img src="https://svgl-badge.vercel.app/api/Framework/Bootstrap?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Language/HTML5?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Language/CSS?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Language/Php?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Language/JavaScript?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Database/MySQL?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Framework/Bootstrap?theme=light" />
           </div>
         </div>
         <div class="mb-4">
@@ -483,8 +480,8 @@
           </p>
 
           <div class="flex flex-wrap gap-2 mt-8">
-            <img src="https://svgl-badge.vercel.app/api/Language/HTML5?theme=light" />
-            <img src="https://svgl-badge.vercel.app/api/Language/CSS?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Language/HTML5?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Language/CSS?theme=light" />
           </div>
         </div>
         <div class="mb-4">
@@ -508,12 +505,12 @@
           </p>
 
           <div class="flex flex-wrap gap-2 mt-8">
-            <img src="https://svgl-badge.vercel.app/api/Language/HTML5?theme=light" />
-            <img src="https://svgl-badge.vercel.app/api/Language/CSS?theme=light" />
-            <img src="https://svgl-badge.vercel.app/api/Language/Php?=light" />
-            <img src="https://svgl-badge.vercel.app/api/Language/JavaScript?theme=light" />
-            <img src="https://svgl-badge.vercel.app/api/Database/MySQL?theme=light" />
-            <img src="https://svgl-badge.vercel.app/api/Framework/Bootstrap?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Language/HTML5?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Language/CSS?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Language/Php?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Language/JavaScript?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Database/MySQL?theme=light" />
+            <img class="tech" src="https://svgl-badge.vercel.app/api/Framework/Bootstrap?theme=light" />
           </div>
         </div>
         <div class="mb-4">
@@ -548,9 +545,8 @@
   <!-- project section end -->
 
   <!-- contact me section start -->
-  <section class="pt-28 overflow-hidden" id="contact" >
-    <div class="container p-4" data-aos="fade-up" data-aos-duration="3000"
-    data-aos-easing="ease-in-out">
+  <section class="pt-28 overflow-hidden" id="contact">
+    <div class="container p-4" data-aos="fade-up" data-aos-duration="3000" data-aos-easing="ease-in-out">
       <div class="text-center lg:w-2/4 lg:mx-auto">
         <h1 class="text-lg text-gradient lg:text-2xl">Contact</h1>
         <h2 class="my-4 font-medium text-slate-700 dark:text-slate-100">if you have questions, criticsm, and

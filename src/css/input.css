@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  font-family:  "Poppins", sans-serif;;
+}
+
+
 @layer components {
   .gradient {
     @apply bg-gradient-to-r from-cyan-500 to-blue-500 font-bold
@@ -22,7 +27,9 @@
     @apply bg-gradient-to-l from-cyan-500 to-blue-500 font-bold
   }
 
-
+  .font-logo{
+    font-family: "Bilbo Swash Caps", cursive;
+  }
 
   /* .nav{
     @apply z-[9999] bg-white;

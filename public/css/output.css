@@ -2206,10 +2206,6 @@ html {
   margin-top: 2rem;
 }
 
-.mb-20 {
-  margin-bottom: 5rem;
-}
-
 .block {
   display: block;
 }
@@ -2454,6 +2450,11 @@ html {
   padding-right: 1rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -2479,8 +2480,17 @@ html {
   padding-bottom: 20px;
 }
 
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .pb-12 {
   padding-bottom: 3rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .pt-10 {
@@ -2503,12 +2513,8 @@ html {
   padding-top: 2rem;
 }
 
-.pt-24 {
-  padding-top: 6rem;
-}
-
-.pb-20 {
-  padding-bottom: 5rem;
+.pr-2 {
+  padding-right: 0.5rem;
 }
 
 .text-center {
@@ -2522,6 +2528,11 @@ html {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-4xl {
@@ -2542,11 +2553,6 @@ html {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-bold {
